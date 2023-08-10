@@ -1,0 +1,89 @@
+def linha():
+    print ('----------------')
+    
+    
+#----------------------------EXERCICIOS DE LISTA -------------------------#
+
+# 1. Ler uma lista de 5 números inteiros e mostre cada número
+# juntamente com a sua posição na lista.
+listaDeInteiros = [1,2,3,4,5]
+print('Índice:', *range(len(listaDeInteiros)), 'lista: ', listaDeInteiros)
+linha()
+
+# 2. Ler uma lista de 10 números reais e mostre-os na ordem
+# inversa.
+listaDeReais = [15.5,2.7,3.8, 4.1, 5.5, 7.5,3.6, 5.5, 9.7, 4.1]
+listaDeReais.reverse()
+print (listaDeReais)
+linha()
+
+# 3. Ler uma lista com 4 notas, em seguida o programa deve exibir
+# as notas e a média.
+notas = [5,8.2,6.4,7]
+print (notas)
+soma_nota = sum(notas)
+media = soma_nota/4
+print('soma das nota: ',soma_nota,'sua média: ', media)
+linha()
+
+# 4. Ler um vetor com 20 idades e exibir a maior e menor.
+idades = [20, 12, 45, 87, 36, 55, 9, 3, 8, 35, 44, 45, 47, 55, 35, 14, 22, 87, 99, 17]
+print (idades)
+idades.sort()
+print(idades)
+linha()
+
+# Utilizando o del, remova todos os elementos da lista criada anteriormente até a lista ficar vazia.
+del idades[0:]
+print(idades)
+linha()
+
+# 2. Faça uma lista de compras do mês, não se esqueça de comprar produtos de limpeza e sorvete!
+mercado =  ['picole', 'cremozinho','sacole', 'sorvete', ['detergente', 'sabonete', 'desinfetante', 'shampoo']]
+print (mercado)
+linha()
+
+# va ao mercado» e delete apenas os produtos de limpeza
+del mercado[4:6]
+print (mercado)
+linha()
+
+# da lista Agora «vá à sorveteria» e se empanturre e sorvete e tire o sorvete da lista..
+mercado.remove('sorvete')
+print(mercado)
+linha()
+
+# Faça uma função que determina se um número é par ou ímpar.
+# Use o % para determinar o resto de uma divisão.Por exemplo: 3 % 2 = 1 e 4 % 2 = 0
+def ParImpa():
+    numero = int(input('Digite um número: '))
+    if numero % 2 == 0:
+        print('O número {} é par'.format(numero))
+    else:
+        print('O número {} é ímpar'.format(numero))  
+ParImpa()
+linha()
+
+# Duas palavras são um “par inverso” se uma for o contrário da outra.
+# Escreva uma função que dado duas palavras,retorne True caso sejam.
+def palavra():
+    resposta = input('informe uma palavra: ')
+    reve = input('informe outra palavra: ')
+    rev = ''.join(reversed(reve))
+    if resposta == rev:
+        print('A palavra é um par inverso: ')
+    else:
+        print('A palavra não é um par inverso: ')  
+palavra()
+linha()
+
+# Escreva uma função que imprime todos os números primos entre 1 e 50 
+# Dica: um número é primo se ele for divisível apenas por 1 e ele mesmo, use o operador % (resto da divisão) para isso.
+def numeroPrimo():
+    for i in range(1, 51):
+        for j in range(2, i):
+            if i % j == 0:
+                break
+        else:
+            print(i)
+numeroPrimo()
